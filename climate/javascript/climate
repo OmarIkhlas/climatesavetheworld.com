@@ -1,0 +1,52 @@
+let count = 1;
+// links
+let link = document.getElementById("link")
+// btns
+let arrowLeft = document.querySelector("#arrow-left");
+let arrowRight = document.querySelector("#arrow-right");
+
+//overly
+let overly = document.querySelector(".overly-onclick")
+//header
+let header = document.querySelector(".heading")
+let title = document.querySelector(".tit")
+let para = document.querySelector(".intro")
+
+
+arrowRight.addEventListener("click", function() {
+    if(count === 1) {
+        overly.style.left = "100%"
+        header.style.background = "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url('../img/power\ plant.jpg')";
+        header.style.backgroundPosition = "center";
+        header.style.backgroundSize = "cover";
+        header.style.transition = "background 1s ease"
+
+        title.innerHTML = "What are the effects of climate change?"
+        para.innerHTML = "Climate change can affect human health, crops growth, weather patterns, and sea levels and so on. Some people can face death or leave their homes. The future of our plant will depend on how fast we will stop greenhouse gas (coil, gas, oil) emissions."
+        link.setAttribute("href", "#section-2");
+        arrowRight.style.visibility = "hidden"
+        arrowLeft.style.visibility = "visible"
+        count++
+    }
+})
+
+arrowLeft.addEventListener("click", function() {
+    if(count !== 1) {
+        overly.style.left = "-100%"
+        header.style.background = "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url('../img/Forests.jpg')";
+        header.style.backgroundPosition = "center";
+        header.style.backgroundSize = "cover";
+        header.style.transition = "background 1s ease"
+
+        title.innerHTML = "What is climate change?"
+        para.innerHTML = `Climate change means a long-lasting, large-scale change in the average
+        temperatures and the earth’s weather patterns. The cause of climate change is fossil fuels
+        that includes coil, gas, and oil. When we use fossil fuels, the trapped carbon dioxide
+        stored inside them gets released into the air, which results in climate change.`
+        link.setAttribute("href", "#section-1");
+        arrowRight.style.visibility = "visible"
+        arrowLeft.style.visibility = "hidden"
+        count--
+
+    }
+})

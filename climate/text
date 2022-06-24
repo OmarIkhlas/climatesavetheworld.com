@@ -1,0 +1,21 @@
+.links-2 {
+    text-decoration: none;
+    padding: 7px 14px;
+    width: 120px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: #7ea740;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 20px 0px;
+    transition: all 0.3s ease-out;
+}
+.link-2:hover,
+.link-2:active {
+    background: #02ff35b9;
+    box-shadow: rgba(0, 255, 72, 0.927) 0px 5px 20px 0px;
+}
+.link-2 {
+    text-decoration: none;
+    color: #fff;
+}
